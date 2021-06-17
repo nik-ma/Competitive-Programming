@@ -1,0 +1,850 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	BIET Result
+</title><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
+    <style>
+        hr {
+            margin-top: 8px;
+            margin-bottom: 8px;
+            border-top: 1px solid #808080;
+        }
+
+        .pagebreak {
+            page-break-before: always;
+        }
+
+        @media print {
+            .no-print, .no-print * {
+                display: none !important;
+            }
+        }
+    </style>
+
+
+    <script>
+        function Dis() {
+
+            $("#hnkBack").hide();
+            $("#btnprint").hide();
+            window.print();
+        }
+    </script>
+</head>
+<body>
+    <form name="form1" method="post" action="ResultODD.aspx" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwNzEwMTI4OTcPZBYCAgEPZBYOAgEPDxYCHgRUZXh0BTlCdW5kZWxraGFuZCBJbnN0aXR1dGUgb2YgRW5naW5lZXJpbmcgJiBUZWNobm9sb2d5LCBKaGFuc2lkZAICDw8WAh8ABQoxODA0MzMxMDI3ZGQCAw8PFgIfAAU0KEVDKSBCLlRlY2guIEVsZWN0cm9uaWNzICYgQ29tbXVuaWNhdGlvbiBFbmdpbmVlcmluZ2RkAgQPDxYCHwAFDU5JS0hJTCBNQVVSWUFkZAIFDw8WAh8ABRZTVUJIQVNIIENIQU5EUkEgTUFVUllBZGQCBw8PFgIfAAUENy42OGRkAggPDxYCHwBlZGRkH/y84+naG3MAtN7ZgyYBnEVn95E=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="0874C39D" />
+</div>
+        <div>
+            <table id="printArea" style="width: 100%; border: solid; border-width: 1px; border-color: gray; border-radius: 4px;" class="table-responsive">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div id="pnlContent" style="margin-left: 10px; margin-right: 10px;">
+                                <section>
+                                    <div class="container">
+                                        <div style="text-align: center;">
+                                            <img src="Images/logo.png" class="img-responsive" style="margin: 10px auto 0;" />
+
+                                            <a id="hnkBack" class="no-print" href="GetResultodd.aspx">Back</a>
+
+                                        </div>
+                                    </div>
+                                </section>
+                                <table class="table-responsive" style="width: 100%;">
+                                    <caption>
+                                        <hr />
+                                        <!--<h4 style="color: black; font-weight: bold;">Student Result</h4>
+            <hr>-->
+                                    </caption>
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 85%; border: 1px solid #d2d2d2; padding: 10px;">
+                                                <table style="width: 100%; font-family: Verdana; font-size: 8pt; vertical-align: top;">
+                                                    <thead style="width: 100%;">
+                                                        <tr>
+                                                            <td style="width: 18%;"></td>
+                                                            <td style="width: 2%;"></td>
+                                                            <td style="width: 30%;"></td>
+                                                            <td style="width: 18%;"></td>
+                                                            <td style="width: 2%;"></td>
+                                                            <td style="width: 30%;"></td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="highlight" style="display: none;">
+                                                            <td><span id="forlblInstituteCodeName" style="font-weight: bold;">Institute Code &amp; Name</span></td>
+                                                            <td><b>:</b></td>
+                                                            <td>
+                                                                <div style="width: 255%;">
+                                                                    
+                                                                    <span id="lblInstitute">Bundelkhand Institute of Engineering & Technology, Jhansi</span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="highlight">
+                                                            <td><span id="Span1" style="font-weight: bold;">Academic Session</span></td>
+                                                            <td><b>:</b></td>
+                                                            <td><span id="Span2">2019-2020</span></td>
+                                                            <td><span id="forlblRollNo" style="font-weight: bold;">RollNo</span></td>
+                                                            <td><b>:</b></td>
+                                                            <td>
+                                                                <span id="lblRollNo">1804331027</span></td>
+                                                        </tr>
+                                                        <tr class="highlight">
+                                                            
+                                                            <td><span id="forlblBranchCodeName" style="font-weight: bold;">Branch Code & Name</span></td>
+                                                            <td><b>:</b></td>
+                                                            <td>
+                                                                <span id="lblBranch">(EC) B.Tech. Electronics & Communication Engineering</span></td>
+                                                        </tr>
+
+                                                        <tr class="highlight">
+                                                            <td><span id="forlblFullName" style="font-weight: bold;">Name</span></td>
+                                                            <td><b>:</b></td>
+                                                            <td>
+                                                                <span id="lblSName">NIKHIL MAURYA</span></td>
+                                                            <!--<td><span id="forlblHindiname" style="font-weight: bold;">Hindi Name</span></td>
+                                                    <td><b>:</b></td>
+                                                    <td><span id="lblHindiName">--</span></td>-->
+                                                            <td><span id="forlblFatherName" style="font-weight: bold;">Father's Name</span></td>
+                                                            <td><b>:</b></td>
+                                                            <td>
+                                                                <span id="lblFName">SUBHASH CHANDRA MAURYA</span></td>
+                                                        </tr>
+                                                        <!--<tr class="highlight">
+                                                    
+                                                    <td><span id="forlblGender" style="font-weight: bold;">Gender</span></td>
+                                                    <td><b>:</b></td>
+                                                    <td><span id="lblGender">--</span></td>
+                                                </tr>-->
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td style="width: 14%; border: 1px solid #d2d2d2; padding: 10px;" class="no-print">
+                                                <table style="width: 100%; padding-right: 10px; text-align: center; font-family: Verdana; font-size: 8pt; vertical-align: top;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <table style="width: 100%; padding-right: 10px; text-align: center; font-family: Verdana; font-size: 8pt; vertical-align: top;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <table style="width: 100%; padding-right: 10px; text-align: center; font-family: Verdana; font-size: 8pt; vertical-align: top;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <button id="btnprint" onclick="javascript: window.print()" class="btn-link">
+                                                                    <i class="fa fa-print" aria-hidden="true"></i><span style="font-size: large">Print</span>
+                                                                </button>
+
+                                                                
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table style="width: 100%; font-family: Verdana; font-size: 8pt;" class="table-responsive">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <hr />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <style type="text/css">
+                                                    .contentclass {
+                                                        margin: 0px;
+                                                        border-collapse: collapse;
+                                                        display: flexbox;
+                                                    }
+
+                                                    .headerclass {
+                                                        padding: 25px 10px 25px 10px;
+                                                        border: 1.25px #740d02 solid;
+                                                        background: #ffefef;
+                                                        margin-bottom: 4px;
+                                                        display: flexbox;
+                                                    }
+
+
+
+                                                        .active, .headerclass:hover {
+                                                            background-color: #f9dada;
+                                                        }
+
+                                                        /*.headerclass:after {
+            content: '\f06e';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 20px;
+            font-size: 27px;
+            margin-top: -25px;
+            background: url(/images/icons/icon-google.png);
+        }*/
+
+
+                                                        .headerclass:after {
+                                                            background: url('../../Images/Site/Artifacts/eyeicon.png') no-repeat;
+                                                            margin-left: 20px;
+                                                            margin-top: -25px;
+                                                        }
+
+                                                    .active:after {
+                                                        content: 'f06e';
+                                                    }
+
+                                                    .button {
+                                                        background-color: #004A7F;
+                                                        -webkit-border-radius: 10px;
+                                                        border-radius: 10px;
+                                                        border: none;
+                                                        color: #FFFFFF;
+                                                        cursor: pointer;
+                                                        display: inline-block;
+                                                        padding: 5px 10px;
+                                                        text-align: center;
+                                                        text-decoration: none;
+                                                    }
+
+                                                    @-webkit-keyframes glowing {
+                                                        0% {
+                                                            background-color: #B20000;
+                                                            -webkit-box-shadow: 0 0 3px #B20000;
+                                                        }
+
+                                                        50% {
+                                                            background-color: #FF0000;
+                                                            -webkit-box-shadow: 0 0 10px #FF0000;
+                                                        }
+
+                                                        100% {
+                                                            background-color: #B20000;
+                                                            -webkit-box-shadow: 0 0 3px #B20000;
+                                                        }
+                                                    }
+
+                                                    @-moz-keyframes glowing {
+                                                        0% {
+                                                            background-color: #B20000;
+                                                            -moz-box-shadow: 0 0 3px #B20000;
+                                                        }
+
+                                                        50% {
+                                                            background-color: #FF0000;
+                                                            -moz-box-shadow: 0 0 10px #FF0000;
+                                                        }
+
+                                                        100% {
+                                                            background-color: #B20000;
+                                                            -moz-box-shadow: 0 0 3px #B20000;
+                                                        }
+                                                    }
+
+                                                    @-o-keyframes glowing {
+                                                        0%;
+
+                                                    {
+                                                        background-color: #B20000;
+                                                        box-shadow: 0 0 3px #B20000;
+                                                    }
+
+                                                    50% {
+                                                        background-color: #FF0000;
+                                                        box-shadow: 0 0 10px #FF0000;
+                                                    }
+
+                                                    100% {
+                                                        background-color: #B20000;
+                                                        box-shadow: 0 0 3px #B20000;
+                                                    }
+
+                                                    }
+
+                                                    @keyframes glowing {
+                                                        0% {
+                                                            background-color: #B20000;
+                                                            box-shadow: 0 0 3px #B20000;
+                                                        }
+
+                                                        50% {
+                                                            background-color: #FF0000;
+                                                            box-shadow: 0 0 10px #FF0000;
+                                                        }
+
+                                                        100% {
+                                                            background-color: #B20000;
+                                                            box-shadow: 0 0 3px #B20000;
+                                                        }
+                                                    }
+
+                                                    .button {
+                                                        -webkit-animation: glowing 1500ms infinite;
+                                                        -moz-animation: glowing 1500ms infinite;
+                                                        -o-animation: glowing 1500ms infinite;
+                                                        animation: glowing 1500ms infinite;
+                                                    }
+                                                </style>
+                                                <div id="ctl04_accordion" style="height: auto; overflow: auto;">
+                                                    <div style="height: auto; overflow: auto; display: block; opacity: 1;">
+                                                        <div id="Div1" class="contentclass" style="display: block; height: auto; overflow: auto;">
+                                                            <div class="container-fluid">
+                                                                
+                                                                
+                                                                        <div class="row">
+
+
+                                                                            <table style="width: 100%; font-family: Verdana; font-size: 8pt;">
+                                                                                <thead>
+
+                                                                                    <tr>
+                                                                                        <td style="width: 25%"><span id="ctl04_ctl00_forlblPracticalSubjects" style="font-weight: bold; margin-left: 10px;">Semester</span></td>
+                                                                                        <td style="width: 5%"><b>:</b></td>
+                                                                                        <td style="width: 15%"><span id="ctl04_ctl00_lblPracticalSubjects">4</span></td>
+                                                                                        <td style="width: 5%"></td>
+                                                                                        <td style="width: 25%"><span id="ctl04_ctl00_forlblSemesterTotalMarksObtained" style="font-weight: bold; margin-left: 10px;"></span></td>
+                                                                                        <td style="width: 5%"><b></b></td>
+                                                                                        <td style="width: 20%">
+                                                                                            <span id="lbloTotalCredit"></span></td>
+                                                                                    </tr>
+                                                                                    <tr>
+
+                                                                                        <td style="width: 25%"><span id="ctl04_ctl00_forlblResultSGPA" style="font-weight: bold; margin-left: 10px;">SGPA</span></td>
+                                                                                        <td style="width: 5%"><b>:</b></td>
+                                                                                        <td style="width: 20%">
+                                                                                            <span id="lbloSGPA">9.89</span></td>
+                                                                                        <td style="width: 5%"></td>
+                                                                                        <td style="width: 25%"><span id="Span3" style="font-weight: bold; margin-left: 10px;">Carry Over Paper</span></td>
+                                                                                        <td style="width: 5%"><b>:</b></td>
+                                                                                        <td style="width: 20%">
+                                                                                            <span id="lblCarry1"></span></td>
+                                                                                    </tr>
+
+                                                                                    <tr>
+                                                                                        <td colspan="7">
+                                                                                            <table style="width: 100%; font-family: Verdana; font-size: 8pt;" class="table table-responsive">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td>
+                                                                                                            <div>
+                                                                                                                <table rules="all" id="ctl04_ctl00_ctl00_grdViewSubjectMarksheet" style="border-collapse: collapse; width: 100%; font-family: Verdana; font-size: 8pt;" cellspacing="0" border="1">
+                                                                                                                    <tbody>
+                                                                                                                        <tr>
+                                                                                                                            <th align="left" scope="col">
+                                                                                                                                <span style="margin-left: 5px;">SUBJECT CODE</span>
+                                                                                                                                <br />
+                                                                                                                                <span style="margin-left: 5px;">SUBJECT NAME</span></th>
+                                                                                                                            <th style="text-align: center" scope="col">&nbsp;</th>
+                                                                                                                            <th style="text-align: center" scope="col">TE</th>
+                                                                                                                            <th style="text-align: center" scope="col">TS</th>
+                                                                                                                            
+                                                                                                                            <th style="text-align: center" scope="col">PE</th>
+                                                                                                                            <th style="text-align: center" scope="col">PS</th>
+                                                                                                                            
+                                                                                                                            <th style="text-align: center" scope="col">ST</th>
+                                                                                                                            <th style="text-align: center" scope="col">GRADE</th>
+                                                                                                                            <th style="text-align: center" scope="col">GP</th>
+                                                                                                                            <th style="text-align: center" scope="col">CREDIT</th>
+                                                                                                                        </tr>
+                                                                                                                        
+                                                                                                                        <tr align="Center">
+                                                                                                                            <td align="left">
+                                                                                                                                <span style="margin-left: 5px;">
+                                                                                                                                    KAS 302</span>
+                                                                                                                                <br />
+                                                                                                                                <span style="margin-left: 5px;">
+                                                                                                                                    Analog Electronics </span></td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">Maximum
+                                                                                                                                <hr />
+                                                                                                                                Obtained
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">100
+                                                                                                                                <hr />
+                                                                                                                                99
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">50
+                                                                                                                                <hr />
+                                                                                                                                49
+                                                                                                                            </td>
+                                                                                                                            
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">
+                                                                                                                                <hr />
+                                                                                                                                
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">
+                                                                                                                                <hr />
+                                                                                                                                
+                                                                                                                            </td>
+                                                                                                                            
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">150
+                                                                                                                                <hr />
+                                                                                                                                148
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                                 <hr />
+                                                                                                                                A+
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                                 <hr />
+                                                                                                                                10
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                               <hr />
+                                                                                                                                4.00
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        
+                                                                                                                        <tr align="Center">
+                                                                                                                            <td align="left">
+                                                                                                                                <span style="margin-left: 5px;">
+                                                                                                                                    KEC 301</span>
+                                                                                                                                <br />
+                                                                                                                                <span style="margin-left: 5px;">
+                                                                                                                                    Signals and System </span></td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">Maximum
+                                                                                                                                <hr />
+                                                                                                                                Obtained
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">100
+                                                                                                                                <hr />
+                                                                                                                                93
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">50
+                                                                                                                                <hr />
+                                                                                                                                50
+                                                                                                                            </td>
+                                                                                                                            
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">
+                                                                                                                                <hr />
+                                                                                                                                
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">
+                                                                                                                                <hr />
+                                                                                                                                
+                                                                                                                            </td>
+                                                                                                                            
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">150
+                                                                                                                                <hr />
+                                                                                                                                143
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                                 <hr />
+                                                                                                                                A+
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                                 <hr />
+                                                                                                                                9
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                               <hr />
+                                                                                                                                4.00
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        
+                                                                                                                        <tr align="Center">
+                                                                                                                            <td align="left">
+                                                                                                                                <span style="margin-left: 5px;">
+                                                                                                                                    KEC 302</span>
+                                                                                                                                <br />
+                                                                                                                                <span style="margin-left: 5px;">
+                                                                                                                                    Data structures And Algorithms </span></td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">Maximum
+                                                                                                                                <hr />
+                                                                                                                                Obtained
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">100
+                                                                                                                                <hr />
+                                                                                                                                96
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">50
+                                                                                                                                <hr />
+                                                                                                                                49
+                                                                                                                            </td>
+                                                                                                                            
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">
+                                                                                                                                <hr />
+                                                                                                                                
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">
+                                                                                                                                <hr />
+                                                                                                                                
+                                                                                                                            </td>
+                                                                                                                            
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">150
+                                                                                                                                <hr />
+                                                                                                                                145
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                                 <hr />
+                                                                                                                                A+
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                                 <hr />
+                                                                                                                                9
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                               <hr />
+                                                                                                                                4.00
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        
+                                                                                                                        <tr align="Center">
+                                                                                                                            <td align="left">
+                                                                                                                                <span style="margin-left: 5px;">
+                                                                                                                                    KEC 303</span>
+                                                                                                                                <br />
+                                                                                                                                <span style="margin-left: 5px;">
+                                                                                                                                    Communication Engineering </span></td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">Maximum
+                                                                                                                                <hr />
+                                                                                                                                Obtained
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">100
+                                                                                                                                <hr />
+                                                                                                                                98
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">50
+                                                                                                                                <hr />
+                                                                                                                                49
+                                                                                                                            </td>
+                                                                                                                            
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">
+                                                                                                                                <hr />
+                                                                                                                                
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">
+                                                                                                                                <hr />
+                                                                                                                                
+                                                                                                                            </td>
+                                                                                                                            
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">150
+                                                                                                                                <hr />
+                                                                                                                                147
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                                 <hr />
+                                                                                                                                A
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                                 <hr />
+                                                                                                                                10
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                               <hr />
+                                                                                                                                3.00
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        
+                                                                                                                        <tr align="Center">
+                                                                                                                            <td align="left">
+                                                                                                                                <span style="margin-left: 5px;">
+                                                                                                                                    KEC 351</span>
+                                                                                                                                <br />
+                                                                                                                                <span style="margin-left: 5px;">
+                                                                                                                                    Communication Lab </span></td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">Maximum
+                                                                                                                                <hr />
+                                                                                                                                Obtained
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">25
+                                                                                                                                <hr />
+                                                                                                                                25
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">25
+                                                                                                                                <hr />
+                                                                                                                                25
+                                                                                                                            </td>
+                                                                                                                            
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">
+                                                                                                                                <hr />
+                                                                                                                                
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">
+                                                                                                                                <hr />
+                                                                                                                                
+                                                                                                                            </td>
+                                                                                                                            
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">50
+                                                                                                                                <hr />
+                                                                                                                                50
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                                 <hr />
+                                                                                                                                A+
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                                 <hr />
+                                                                                                                                10
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                               <hr />
+                                                                                                                                1.00
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        
+                                                                                                                        <tr align="Center">
+                                                                                                                            <td align="left">
+                                                                                                                                <span style="margin-left: 5px;">
+                                                                                                                                    KEC 352</span>
+                                                                                                                                <br />
+                                                                                                                                <span style="margin-left: 5px;">
+                                                                                                                                    Signals and System Lab </span></td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">Maximum
+                                                                                                                                <hr />
+                                                                                                                                Obtained
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">25
+                                                                                                                                <hr />
+                                                                                                                                24
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">25
+                                                                                                                                <hr />
+                                                                                                                                24
+                                                                                                                            </td>
+                                                                                                                            
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">
+                                                                                                                                <hr />
+                                                                                                                                
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">
+                                                                                                                                <hr />
+                                                                                                                                
+                                                                                                                            </td>
+                                                                                                                            
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">50
+                                                                                                                                <hr />
+                                                                                                                                48
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                                 <hr />
+                                                                                                                                A+
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                                 <hr />
+                                                                                                                                10
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                               <hr />
+                                                                                                                                1.00
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        
+                                                                                                                        <tr align="Center">
+                                                                                                                            <td align="left">
+                                                                                                                                <span style="margin-left: 5px;">
+                                                                                                                                    KEC 353</span>
+                                                                                                                                <br />
+                                                                                                                                <span style="margin-left: 5px;">
+                                                                                                                                    Analog Electronics Lab </span></td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">Maximum
+                                                                                                                                <hr />
+                                                                                                                                Obtained
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">25
+                                                                                                                                <hr />
+                                                                                                                                25
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">25
+                                                                                                                                <hr />
+                                                                                                                                25
+                                                                                                                            </td>
+                                                                                                                            
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">
+                                                                                                                                <hr />
+                                                                                                                                
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">
+                                                                                                                                <hr />
+                                                                                                                                
+                                                                                                                            </td>
+                                                                                                                            
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">50
+                                                                                                                                <hr />
+                                                                                                                                50
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                                 <hr />
+                                                                                                                                A+
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                                 <hr />
+                                                                                                                                10
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                               <hr />
+                                                                                                                                1.00
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        
+                                                                                                                       
+                                                                                                                          
+                                                                                                                        
+                                                                                                                        <tr align="Center">
+                                                                                                                            <td align="left">
+                                                                                                                                <span style="margin-left: 5px;">
+                                                                                                                                    KNC 301</span>
+                                                                                                                                <br />
+                                                                                                                                <span style="margin-left: 5px;">
+                                                                                                                                    Python progamming </span></td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">Maximum
+                                                                                                                                <hr />
+                                                                                                                                Obtained
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">50
+                                                                                                                                <hr />
+                                                                                                                                45
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">25
+                                                                                                                                <hr />
+                                                                                                                                25
+                                                                                                                            </td>
+                                                                                                                            
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">
+                                                                                                                                <hr />
+                                                                                                                                
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">
+                                                                                                                                <hr />
+                                                                                                                                
+                                                                                                                            </td>
+                                                                                                                            
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">75
+                                                                                                                                <hr />
+                                                                                                                                70
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                                 <hr />
+                                                                                                                                A+
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                                 <hr />
+                                                                                                                                10
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                               <hr />
+                                                                                                                                0.00
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        
+                                                                                                                        <tr align="Center">
+                                                                                                                            <td align="left">
+                                                                                                                                <span style="margin-left: 5px;">
+                                                                                                                                    KVE 301</span>
+                                                                                                                                <br />
+                                                                                                                                <span style="margin-left: 5px;">
+                                                                                                                                    Technical Communication </span></td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">Maximum
+                                                                                                                                <hr />
+                                                                                                                                Obtained
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">100
+                                                                                                                                <hr />
+                                                                                                                                94
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">50
+                                                                                                                                <hr />
+                                                                                                                                45
+                                                                                                                            </td>
+                                                                                                                            
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">
+                                                                                                                                <hr />
+                                                                                                                                
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">
+                                                                                                                                <hr />
+                                                                                                                                
+                                                                                                                            </td>
+                                                                                                                            
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">150
+                                                                                                                                <hr />
+                                                                                                                                139
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                                 <hr />
+                                                                                                                                A+
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                                 <hr />
+                                                                                                                                9
+                                                                                                                            </td>
+                                                                                                                            <td style="padding-top: 5px; padding-bottom: 5px;">-
+                                                                                                                               <hr />
+                                                                                                                                3.00
+                                                                                                                            </td>
+                                                                                                                        </tr>
+                                                                                                                        
+                                                                                                                    </tbody>
+                                                                                                                </table>
+                                                                                                            </div>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+
+                                                                                </thead>
+                                                                            </table>
+
+                                                                        </div>
+                                                                    
+                                                         
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </td>
+                    </tr>
+ 
+                </tbody>
+            </table>
+
+        </div>
+
+    </form>
+    <div class="box3" style="border: 1px solid #000; margin-top: 30px; padding: 15px">
+        <p class="pagebreak"></p>
+        <p>
+            <strong>Note :</strong> TE : Theory External, TS : Theory Sessional, PE : Practical External, PS : Practical Sessional, ST : Subject Total, GP : Grade Point
+        </p>
+        <ol>
+            <li>Although utmost care has been exercised in preparation of marks; 
+yet if at any stage any error is detected based on facts; these marks will be treated as null 
+and void and fresh factual marks would be given. </li>
+            <li>If it is detected at any stage that a student appeared in the examination in violation of 
+admission /examination rules/norms, the statement of marks given herein will be treated as null and void. </li>
+            <li>In case of any discrepancy in Marks, please contact either personally or through your 
+representative in the Controller Of Examination Office, BIET, Jhansi and submit application 
+latest by as soon as possible. </li>
+
+        </ol>
+    </div>
+</body>
+</html>
