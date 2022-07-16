@@ -1,17 +1,25 @@
 class Solution:
     def findPaths(self, m: int, n: int, maxMove: int, startRow: int, startColumn: int) -> int:
-        DIR = [0, 1, 0, -1, 0]
+        # ans=0
+        m,n=n,m
 
-        @lru_cache(None)
-        def dp(r, c, maxMove):
-            if r < 0 or r == m or c < 0 or c == n: return 1 
-            if maxMove == 0: return 0
-            ans = 0
-            for i in range(4):
-                ans = (ans + dp(r + DIR[i], c + DIR[i + 1], maxMove - 1)) % 1_000_000_007
-            return ans
+        @cache
+        def solve(i,j,k):
+            # nonlocal ans
+            if k<0:
+                return 0
+            
+            if (i<0 or i>n-1 or j<0 or j>m-1):
+                return 1
 
-        return dp(startRow, startColumn, maxMove)
+            ans=0
+            ans+=solve(i+1,j,k-1)
+            ans+=solve(i-1,j,k-1)
+            ans+=solve(i,j+1,k-1)
+            ans+=solve(i,j-1,k-1)
+            # ans+=pt
+            return ans%(10**9+7)
+        return solve(startRow,startColumn,maxMove)
         
         
             
