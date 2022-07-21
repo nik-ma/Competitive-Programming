@@ -20,6 +20,3 @@ class Solution(object):
             prev.next = temp
 
         return dummy.next
-        
-        
-        
