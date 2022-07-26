@@ -1,55 +1,45 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 class Solution:
     def getDirections(self, root: Optional[TreeNode], startValue: int, destValue: int) -> str:
-            # 1) Create preorder DFS to find the lowest Common Ancestor:
-            def dfsLCA(node):
-                # Tree nodes exhausted:
-                if not node:
-                    return None
-
-                # Node is descendant of itself:
-                if node.val == startValue or node.val == destValue:
-                    return node
-
-                # Perform dfs preorder traversal:
-                left_node = dfsLCA(node.left)
-                right_node = dfsLCA(node.right)
-
-                # LCA is found or continue looking:
-                if left_node and right_node:
-                    return node
-                else:
-                    return left_node or right_node
-
-
-            # 2) Create backtracking method to create path/directions:
-            def backtrack(node, path, val):
-                # Destination has been reached
-                if node.val == val:
-                    return "".join(path)
-
-                # Write/process path values at the left:
-                if node.left:
-                    path.append("L")
-                    left = backtrack(node.left, path, val)
-                    path.pop()
-                    if left:
-                        return left
-
-                # Write/process path values at the right:
-                if node.right:
-                    path.append("R")
-                    right = backtrack(node.right, path, val)
-                    path.pop()
-                    if right:
-                        return right  
-
-            # 3) DRIVE CODE:
-            # a) Call LCA method to find lowest common ancestor of start and dest nodes:
-            LCA = dfsLCA(root)
-
-            # b) Create the path from each node (start/dest) to LCA:
-            startPath = backtrack(LCA, [], startValue)
-            destPath = backtrack(LCA, [], destValue)
-
-            # c) Return the union of the 2 paths. But reverse the start path:
-            return len(startPath) * "U" + destPath
+        def lca(root,p,q):
+            if root==None or root.val==p or root.val==q:
+                return root
+            left=lca(root.left,p,q)
+            right=lca(root.right,p,q)
+            if left==None:
+                return right
+            if right==None:
+                return left
+            return root
+        root=lca(root,startValue,destValue)
+        def find(root,path,target):
+            if root==None:
+                return 
+            if root.val==target:
+                # ans.append(path)
+                # lsfo
+                return ''.join(path)
+            path.append('L')
+            left=find(root.left,path,target)
+            if left:
+                return left
+            path.pop()
+            path.append('R')
+            right=find(root.right,path,target)
+            if right:
+                return right
+            path.pop()
+            return 
+            
+        ans=[]
+        first=find(root,[],startValue)
+        second=find(root,[],destValue)
+        # print(second)
+        return 'U'*(len(first))+''.join(second)
+    
+        
