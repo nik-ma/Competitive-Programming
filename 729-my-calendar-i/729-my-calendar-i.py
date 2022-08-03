@@ -1,21 +1,14 @@
 class MyCalendar:
-
     def __init__(self):
-        self.bookings=[]
+        self.arr = []
         
-
-    def book(self, start: int, end: int) -> bool:
-        new=self.bookings[:]
-        self.bookings.append([start,end])
-        self.bookings.sort()
-        i=1
-        while i<len(self.bookings):
-            if self.bookings[i][0]<self.bookings[i-1][1]:
-                self.bookings=new
-                return False
-            i+=1
-        return True
-        
+    def book(self, start, end):
+        q1 = bisect_right(self.arr, start)
+        q2 = bisect_left(self.arr, end)
+        if q1 == q2 and q1 % 2 == 0:
+            self.arr[q1:q1] = [start, end]
+            return True
+        return False
                 
 
 
