@@ -1,11 +1,19 @@
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
+        subarray=[float(-inf)]
         n=len(nums)
-        dp=[1]*(n+1)
-        for i in range(1,n):
-            maxi=-1
-            for j in range(i):
-                if nums[j]<nums[i] and maxi<dp[j]:
-                    dp[i]=dp[j]+1
-                    maxi=dp[j]
-        return max(dp)
+        for i in range(n):
+            if nums[i]>subarray[-1]:
+                subarray.append(nums[i])
+            elif nums[i]==subarray[-1]:
+                continue
+            else:
+                ind=bisect.bisect_left(subarray,nums[i])
+                if ind>len(subarray)-1:
+                    subarray.append(nums[i])
+                    continue
+                subarray[ind]=nums[i]
+        # print(subarray)
+        return len(subarray)-1
+                
+                
